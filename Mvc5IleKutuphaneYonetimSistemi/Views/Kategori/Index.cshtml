@@ -1,0 +1,43 @@
+﻿@using Mvc5IleKutuphaneYonetimSistemi.Models.Entity
+
+@model List<TblKategori>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+    
+}
+
+<h2>Index</h2>
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Kategori Numarası</th>
+        <th>Kategori Adı</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+
+
+            <td>@item.ID</td>
+            <td>@item.AD</td>
+            <td>
+                <a href="/Kategori/KategoriSil/@item.ID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Kategori/KategoriGuncelle/@item.ID" class="btn btn-success">Güncelle</a>
+            </td>
+        
+        </tr>
+
+    }
+
+
+
+    </table>
+<a href="/Kategori/KategoriEkle" class="btn btn-primary">Ekle</a>

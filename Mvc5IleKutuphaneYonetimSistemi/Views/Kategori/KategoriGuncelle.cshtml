@@ -1,0 +1,29 @@
+﻿@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblKategori
+
+@{
+    ViewBag.Title = "KategoriGuncelle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+
+
+
+@using (Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post))
+{
+                <div class="form-group">
+                    <br />
+                       <label class="text-bg-danger fw-bolder ">Kategori Adı</label>    
+                    <br />
+                    <br />
+                    @Html.TextBoxFor(k => k.AD, new  {@class ="form-control" })
+
+
+                    <div>
+                        <button class="btn btn-success">Kategori Güncelle</button>
+                    </div>
+
+
+                </div>
+}
