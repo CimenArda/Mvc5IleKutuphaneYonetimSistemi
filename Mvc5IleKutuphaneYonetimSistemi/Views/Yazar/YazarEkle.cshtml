@@ -1,0 +1,58 @@
+﻿@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblYazar
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<form class="form-group" method="post">
+
+
+    <div></div>
+
+    <div style="margin-top:15px">
+
+        <label>Yazar Adı</label>
+
+        @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.Error
+            </div>
+        }
+    </div>
+
+    <div style="margin-top:15px">
+        <label>Yazar Soyadı</label>
+
+        @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control" })
+        @if (ViewBag.Error2 != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.Error2
+            </div>
+        }
+    </div>
+
+
+    <div style="margin-top:15px">
+    <label>Yazar Detayı</label>
+
+        @Html.TextBoxFor(y => y.DETAY, new { @class = "form-control" })
+    </div>
+
+
+        <div>
+            <button class="btn btn-success">Ekle</button>
+        </div>
+
+
+
+
+
+
+
+
+</form>

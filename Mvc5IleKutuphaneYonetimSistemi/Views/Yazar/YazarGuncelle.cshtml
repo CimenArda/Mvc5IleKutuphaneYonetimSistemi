@@ -1,0 +1,36 @@
+﻿@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblYazar
+@{
+    ViewBag.Title = "YazarGuncelle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("YazarGuncelle", "Yazar", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <label class="text-bg-danger fw-bolder ">Yazar Adı</label>
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.AD, new { @class = "form-control" })
+        <br />
+        <br />
+        <label class="text-bg-danger fw-bolder ">Yazar Soyadı</label>
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.SOYAD, new { @class = "form-control" })
+        <br />
+        <br />
+        <label class="text-bg-danger fw-bolder ">Yazar Detayı</label>
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.DETAY, new { @class = "form-control" })
+
+        <div>
+            <button class="btn btn-success">Yazar Güncelle</button>
+        </div>
+
+
+    </div>
+}
+
+
