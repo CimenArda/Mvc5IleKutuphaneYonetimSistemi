@@ -1,0 +1,20 @@
+﻿@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblPersonel
+@{
+    ViewBag.Title = "PersonelGuncelle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+
+    <h2>Personel Güncelleme Sayfası</h2>
+
+    <label>Personel Adı</label>
+    <br />
+    @Html.TextBoxFor(y => y.PERSONEL, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Personel Güncelle</button>
+
+
+</form>

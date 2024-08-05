@@ -1,0 +1,20 @@
+﻿@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblPersonel
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<form class="form-group" method="post" >
+
+    <h2>Personel Ekleme Sayfası</h2>
+
+    <label>Personel Adı</label>
+    <br />
+    @Html.TextBoxFor(y => y.PERSONEL, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Personel Ekle</button>
+
+
+</form>

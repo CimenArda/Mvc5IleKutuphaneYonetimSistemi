@@ -1,0 +1,44 @@
+﻿@using Mvc5IleKutuphaneYonetimSistemi.Models.Entity
+@model List<TblPersonel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Personel Numarası</th>
+        <th>Personel Adı-Soyadı</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+
+
+            <td>@item.ID</td>
+            <td>@item.PERSONEL</td>
+            <td>
+                <a href="/Personel/PersonelSil/@item.ID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Personel/PersonelGuncelle/@item.ID" class="btn btn-success">Güncelle</a>
+            </td>
+
+        </tr>
+
+    }
+
+
+
+</table>
+<a href="/Personel/PersonelEkle" class="btn btn-primary">Ekle</a>
+
+
