@@ -255,6 +255,8 @@
     <Content Include="Views\Yazar\YazarEkle.cshtml" />
     <Content Include="Views\Yazar\YazarGuncelle.cshtml" />
     <Content Include="Views\Kitap\Index.cshtml" />
+    <Content Include="Views\Kitap\KitapEkle.cshtml" />
+    <Content Include="Views\Kitap\KitapGuncelle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

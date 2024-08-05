@@ -1,0 +1,67 @@
+﻿@using Mvc5IleKutuphaneYonetimSistemi.Models.Entity
+@model List<TblKitap>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Kitap Sayfası İşlemleri</h2>
+
+
+
+@using (Html.BeginForm("Index", "Kitap", FormMethod.Get))
+{
+    <div class="mb-3">
+        <label for="searchBox" class="form-label"><b>Aranacak Kitap Adı Giriniz:</b></label>
+        @Html.TextBox("p", null, new { @class = "form-control", id = "searchBox" })
+        <input type="submit" value="Ara" class="btn btn-outline-primary mt-2" />
+    </div>
+}
+<div style="margin-bottom=15px; margin-top=15px">
+
+
+</div>
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Kitap Numarası</th>
+        <th>Kitap Adı</th>
+        <th>Kitap Yazarı</th>
+        <th>Kitap Kategorisi</th>
+        <th>Kitap Basım Yılı</th>
+        <th>Kitap Yayınevi</th>
+        <th>Kitap Sayfası</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+
+
+            <td>@item.ID</td>
+            <td>@item.AD</td>
+            <td>@item.TblYazar.AD @item.TblYazar.SOYAD</td>
+            <td>@item.TblKategori.AD</td>
+            <td>@item.BASIMYIL</td>
+            <td>@item.YAYINEVİ</td>
+            <td>@item.SAYFA</td>
+            <td>
+                <a href="/Kitap/KitapSil/@item.ID" class="btn btn-danger">Sil</a>
+            </td>
+            <td>
+                <a href="/Kitap/KitapGuncelle/@item.ID" class="btn btn-success">Güncelle</a>
+            </td>
+
+        </tr>
+
+    }
+
+
+
+</table>
+<a href="/Kitap/KitapEkle" class="btn btn-primary">Ekle</a>
+
