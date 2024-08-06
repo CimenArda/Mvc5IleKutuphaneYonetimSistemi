@@ -1,0 +1,79 @@
+﻿
+@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblHareket
+@{
+    ViewBag.Title = "OduncVer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Kitap Ödünç Verme</h2>
+
+<form class="form-group" method="post">
+
+
+    <div></div>
+
+    <div style="margin-top:15px">
+
+        <label>Üye Numarası</label>
+        @Html.TextBoxFor(y => y.ID, new { @class = "form-control" })
+
+    </div>
+
+
+    <div style="margin-top:15px">
+
+        <label>Kitap Numarası</label>
+        @Html.TextBoxFor(y => y.KITAP, new { @class = "form-control" })
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.Error
+            </div>
+        }
+
+    </div>
+
+
+    <div style="margin-top:15px">
+
+        <label>Personel Numarası</label>
+        @Html.TextBoxFor(y => y.PERSONEL, new { @class = "form-control" })
+        @if (ViewBag.Error2 != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.Error2
+            </div>
+        }
+
+    </div>
+
+
+    <div style="margin-top:15px">
+
+        <label>Kitap Alış Tarihi</label>
+
+        <input type="text" class="form-control" name="ALISTARIH" value="@DateTime.Now.ToShortDateString()" />
+               
+    </div>
+
+    <div style="margin-top:15px">
+
+        <label>Kitap İade Tarihi</label>
+        <input type="text" class="form-control" name="IADETARIH" value="@DateTime.Now.AddDays(7).ToShortDateString()" />
+
+    </div>
+
+    <br />
+
+    <div>
+        <button class="btn btn-success"> Kitap Ödünç Ver</button>
+    </div>
+
+
+
+
+
+
+
+
+</form>
