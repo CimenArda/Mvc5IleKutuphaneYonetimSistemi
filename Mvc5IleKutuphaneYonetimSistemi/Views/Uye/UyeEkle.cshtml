@@ -1,0 +1,71 @@
+﻿@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblUye
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+
+    <h2>Personel Ekleme Sayfası</h2>
+
+    <label>Personel Adı</label>
+    <br />
+    @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+
+
+    <br />
+    <label>Personel Soyadı</label>
+    <br />
+    @Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control" })
+
+
+
+
+    <br />
+    <label>Personel Maili</label>
+    <br />
+    @Html.TextBoxFor(y => y.MAIL, new { @class = "form-control" })
+
+
+
+    <br />
+    <label>Personel Kullanıcı Adı</label>
+    <br />
+    @Html.TextBoxFor(y => y.KULLANICIAD, new { @class = "form-control" })
+
+
+
+    <br />
+    <label>Personel Sifre</label>
+    <br />
+    @Html.TextBoxFor(y => y.SIFRE, new { @class = "form-control" })
+
+
+
+
+    <br />
+    <label>Personel Fotoğraf</label>
+    <br />
+    @Html.TextBoxFor(y => y.FOTOGRAF, new { @class = "form-control" })
+
+
+
+
+    <br />
+    <label>Personel Telefon</label>
+    <br />
+    @Html.TextBoxFor(y => y.TELEFON, new { @class = "form-control" })
+
+
+
+    <br />
+    <label>Personel Okul</label>
+    <br />
+    @Html.TextBoxFor(y => y.OKUL, new { @class = "form-control" })
+
+
+    <br />
+    <button class="btn btn-success">Üye Ekle</button>
+
+
+</form>
