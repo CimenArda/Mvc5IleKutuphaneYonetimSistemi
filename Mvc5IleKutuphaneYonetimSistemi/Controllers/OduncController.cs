@@ -44,7 +44,22 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
             }
         }
 
+        public ActionResult IadeEt(int id)
+        {
 
+            var odn =db.TblHareket.Find(id);
+            return View("IadeEt",odn);
+        }
+
+        [HttpPost]
+        public ActionResult OduncGuncelle(TblHareket p)
+        {
+            var hareket = db.TblHareket.Find(p.ID);
+            hareket.UYEGETIRDIGITARIH = p.UYEGETIRDIGITARIH;
+            hareket.ISLEMDURUM = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
 
 

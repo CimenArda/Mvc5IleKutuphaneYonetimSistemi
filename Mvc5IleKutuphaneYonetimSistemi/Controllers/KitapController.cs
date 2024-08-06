@@ -110,7 +110,7 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
             ktp.BASIMYIL = Kitap.BASIMYIL;
             ktp.YAYINEVİ = Kitap.YAYINEVİ;
             ktp.SAYFA = Kitap.SAYFA;
-          
+            
             var ktg =db.TblKategori.Where(k=>k.ID == Kitap.TblKategori.ID).FirstOrDefault();
             var yzr =db.TblYazar.Where(k=>k.ID == Kitap.TblYazar.ID).FirstOrDefault();
 
