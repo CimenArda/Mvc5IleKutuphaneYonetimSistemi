@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="78644f83bf034c3baddf0de1bc245046" Name="Diagram1">
-        <EntityTypeShape EntityType="DBKUTUPHANEModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+      <Diagram DiagramId="a0fac735c6e94ec3a7f5ca24dd711592" Name="Diagram1">
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TblCeza" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBKUTUPHANEModel.TblHareket" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DBKUTUPHANEModel.TblKasa" Width="1.5" PointX="7.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TblHareket" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TblKasa" Width="1.5" PointX="7.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TblKategori" Width="1.5" PointX="1.5" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TblKitap" Width="1.5" PointX="3.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="DBKUTUPHANEModel.TblPersonel" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />

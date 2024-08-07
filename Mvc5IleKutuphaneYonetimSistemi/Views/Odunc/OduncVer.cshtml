@@ -7,7 +7,8 @@
 
 <h2>Kitap Ödünç Verme</h2>
 
-<form class="form-group" method="post">
+@using (@Html.BeginForm("OduncVer", "Odunc", FormMethod.Post))
+{
 
 
     <div></div>
@@ -15,7 +16,7 @@
     <div style="margin-top:15px">
 
         <label>Üye Numarası</label>
-        @Html.TextBoxFor(y => y.ID, new { @class = "form-control" })
+        @Html.TextBoxFor(y => y.UYE, new { @class = "form-control" })
 
     </div>
 
@@ -53,7 +54,7 @@
         <label>Kitap Alış Tarihi</label>
 
         <input type="text" class="form-control" name="ALISTARIH" value="@DateTime.Now.ToShortDateString()" />
-               
+
     </div>
 
     <div style="margin-top:15px">
@@ -65,15 +66,7 @@
 
     <br />
 
-    <div>
-        <button class="btn btn-success"> Kitap Ödünç Ver</button>
-    </div>
+    <button class="btn btn-success"> Kitap Ödünç Ver</button>
 
-
-
-
-
-
-
-
-</form>
+    <input type="hidden" value="false" name="ISLEMDURUM" />
+}

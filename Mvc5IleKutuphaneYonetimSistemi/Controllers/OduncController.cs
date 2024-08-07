@@ -14,7 +14,7 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
 
         public ActionResult Index()
         {
-            var hareketler = db.TblHareket.ToList();
+            var hareketler = db.TblHareket.Where(x=>x.ISLEMDURUM==false).ToList();
 
             return View(hareketler);
         }
