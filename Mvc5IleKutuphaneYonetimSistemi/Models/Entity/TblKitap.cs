@@ -28,6 +28,7 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Models.Entity
         public string YAYINEVİ { get; set; }
         public string SAYFA { get; set; }
         public Nullable<bool> DURUM { get; set; }
+        public string KITAPRESIM { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblHareket> TblHareket { get; set; }
