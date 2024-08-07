@@ -21,6 +21,8 @@
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TblHareket_TblUye" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TblKitap_TblKategori" ManuallyRouted="false" />
         <AssociationConnector Association="DBKUTUPHANEModel.FK_TblKitap_TblYazar" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TblHakkimizda" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBKUTUPHANEModel.TblIletisim" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
