@@ -44,10 +44,22 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
             }
         }
 
-        public ActionResult IadeEt(int id)
+        public ActionResult IadeEt(TblHareket p)
         {
 
-            var odn =db.TblHareket.Find(id);
+            var odn =db.TblHareket.Find(p.ID);
+
+            DateTime d1 = DateTime.Parse(odn.IADETARIH.ToString());
+
+            DateTime d2 = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+
+            TimeSpan d3 = d2 - d1;
+            ViewBag.dgr2 = d3.TotalDays;
+
+
+
+
+            ViewBag.dgr = d1;
             return View("IadeEt",odn);
         }
 
