@@ -38,6 +38,7 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Models.Entity
         public virtual DbSet<TblYazar> TblYazar { get; set; }
         public virtual DbSet<TblHakkimizda> TblHakkimizda { get; set; }
         public virtual DbSet<TblIletisim> TblIletisim { get; set; }
+        public virtual DbSet<TblMesajlar> TblMesajlar { get; set; }
     
         public virtual ObjectResult<string> enFazlakitapYazar()
         {

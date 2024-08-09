@@ -85,6 +85,17 @@
           <Property Name="DURUM" Type="bit" />
           <Property Name="KITAPRESIM" Type="varchar" MaxLength="250" />
         </EntityType>
+        <EntityType Name="TblMesajlar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GONDEREN" Type="varchar" MaxLength="50" />
+          <Property Name="ALICI" Type="varchar" MaxLength="50" />
+          <Property Name="KONU" Type="varchar" MaxLength="50" />
+          <Property Name="ICERIK" Type="varchar" MaxLength="500" />
+          <Property Name="TARIH" Type="smalldatetime" />
+        </EntityType>
         <EntityType Name="TblPersonel">
           <Key>
             <PropertyRef Name="ID" />
@@ -240,6 +251,7 @@
           <EntitySet Name="TblKasa" EntityType="Self.TblKasa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblKategori" EntityType="Self.TblKategori" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblKitap" EntityType="Self.TblKitap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMesajlar" EntityType="Self.TblMesajlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblPersonel" EntityType="Self.TblPersonel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblUye" EntityType="Self.TblUye" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblYazar" EntityType="Self.TblYazar" Schema="dbo" store:Type="Tables" />
@@ -538,6 +550,7 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="TblMesajlar" EntityType="DBKUTUPHANEModel.TblMesajlar" />
         </EntityContainer>
         <EntityType Name="TblHakkimizda">
           <Key>
@@ -567,6 +580,17 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="TblMesajlar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GONDEREN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ALICI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ICERIK" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -719,6 +743,18 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DBKUTUPHANEModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DBKUTUPHANEModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="TblMesajlar">
+            <EntityTypeMapping TypeName="DBKUTUPHANEModel.TblMesajlar">
+              <MappingFragment StoreEntitySet="TblMesajlar">
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ICERIK" ColumnName="ICERIK" />
+                <ScalarProperty Name="KONU" ColumnName="KONU" />
+                <ScalarProperty Name="ALICI" ColumnName="ALICI" />
+                <ScalarProperty Name="GONDEREN" ColumnName="GONDEREN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

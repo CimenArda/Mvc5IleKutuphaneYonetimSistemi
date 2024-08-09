@@ -1,0 +1,34 @@
+﻿@using Mvc5IleKutuphaneYonetimSistemi.Models.Entity
+@model List<TblMesajlar>
+@{
+    ViewBag.Title = "GonderilenMesajlar";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<h2>Gönderilen Mesajlar Sayfası</h2>
+<hr />
+<table class="table table-hover">
+    <tr>
+        <th>ALICI</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Tarih</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+
+        <tr>
+
+            <td>@item.ALICI</td>
+            <td>@item.KONU</td>
+            <td>@item.ICERIK</td>
+            <td>@item.TARIH</td>
+        </tr>
+    }
+</table>
+
+
+
+

@@ -1,0 +1,34 @@
+﻿@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblMesajlar
+
+@{
+    ViewBag.Title = "YeniMesaj";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+<form class="form-group" method="post">
+
+    <h2>Yeni Mesaj Ekleme Sayfası</h2>
+
+    <label>Alıcı Adı</label>
+    <br />
+    @Html.TextBoxFor(y => y.ALICI, new { @class = "form-control" })
+
+    <br />
+    <label>Konu</label>
+    <br />
+    @Html.TextBoxFor(y => y.KONU, new { @class = "form-control" })
+
+    <br />
+    <label>Mesajınız</label>
+    <br />
+    @Html.TextAreaFor(y => y.ICERIK, new { @class = "form-control" })
+
+
+
+    <input type="hidden" name="TARIH" value="@DateTime.Now.ToShortDateString()" />
+    <br />
+    <button class="btn btn-success">Gönder Gitsin</button>
+
+
+</form>
+

@@ -39,5 +39,20 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
             db.SaveChanges();
             return View();
         }
+
+
+
+        public ActionResult Kitaplarim()
+        {
+            var kullanici = (string)Session["Mail"];
+            var id = db.TblUye.Where(x => x.MAIL == kullanici.ToString()).Select(z => z.ID).FirstOrDefault();
+
+            var hareketler = db.TblHareket.Where(x => x.UYE == id).ToList();
+
+            return View(hareketler);
+
+        }
+
+
     }
 }
