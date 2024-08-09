@@ -592,7 +592,7 @@
     <Content Include="startbootstrap-simple-sidebar-master\src\pug\index.pug" />
     <Content Include="startbootstrap-simple-sidebar-master\src\scss\styles.scss" />
     <Content Include="Views\Shared\_LayoutPanel.cshtml" />
-    <Content Include="Views\Panelim\Index.cshtml" />
+    <Content Include="Views\Panelim\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
