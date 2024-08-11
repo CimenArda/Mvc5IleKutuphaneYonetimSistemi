@@ -13,7 +13,7 @@
         <th>Yazar Numarası</th>
         <th>Yazar Adı</th>
         <th>Yazar SoyAdı</th>
-        <th>Yazar Detayı</th>
+        <th>Yazarın Kitapları</th>
         <th></th>
         <th></th>
     </tr>
@@ -26,7 +26,9 @@
             <td>@item.ID</td>
             <td>@item.AD</td>
             <td>@item.SOYAD</td>
-            <td>@item.DETAY</td>
+            <td>
+                <a href="/Yazar/YazarKitaplar/@item.ID" class="btn btn-warning">Detaylar</a>
+            </td>
             <td>
                 <a href="/Yazar/YazarSil/@item.ID" onclick="return confirm('Silmek İstiyor Musunuz ?')" class="btn btn-danger">Sil</a>
             </td>

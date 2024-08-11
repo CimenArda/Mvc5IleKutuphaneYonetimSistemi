@@ -601,6 +601,7 @@
     <Content Include="Views\Mesajlar\YeniMesaj.cshtml" />
     <Content Include="Views\Mesajlar\GonderilenMesajlar.cshtml" />
     <Content Include="Views\Panelim\Kitaplarim.cshtml" />
+    <Content Include="Views\Yazar\YazarKitaplar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

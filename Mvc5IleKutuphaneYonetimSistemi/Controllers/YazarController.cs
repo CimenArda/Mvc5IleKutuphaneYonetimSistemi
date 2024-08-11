@@ -77,7 +77,11 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
         }
 
 
-
+        public ActionResult YazarKitaplar(int id)
+        {
+            var yazar = db.TblKitap.Where(x => x.YAZAR == id).ToList();
+            return View(yazar);
+        }
 
 
 
