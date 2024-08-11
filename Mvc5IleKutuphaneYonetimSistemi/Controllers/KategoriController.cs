@@ -13,7 +13,7 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
         
         public ActionResult Index()
         {
-            var kategoriler = db.TblKategori.ToList();
+            var kategoriler = db.TblKategori.Where(x=>x.DURUM ==true).ToList();
 
             return View(kategoriler);
         }
@@ -47,8 +47,10 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
         public ActionResult KategoriSil(int id)
         {
             var kategoribul =db.TblKategori.Find(id);
-          
-                db.TblKategori.Remove(kategoribul);
+
+            //db.TblKategori.Remove(kategoribul);
+
+                 kategoribul.DURUM = false;
                 db.SaveChanges();
                 return RedirectToAction("Index");
         }
