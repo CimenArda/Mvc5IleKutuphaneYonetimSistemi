@@ -81,6 +81,9 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
         public ActionResult UyeKitapGecmis(int id)
         {
             var kitapgecmis =db.TblHareket.Where(x=>x.UYE==id).ToList();
+            var uyead = db.TblUye.Where(x => x.ID == id).Select(x => x.AD + " " + x.SOYAD).FirstOrDefault();
+
+            ViewBag.uyead = uyead;
             return View(kitapgecmis);
         }
 

@@ -80,6 +80,11 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
         public ActionResult YazarKitaplar(int id)
         {
             var yazar = db.TblKitap.Where(x => x.YAZAR == id).ToList();
+
+            var yazarad =db.TblYazar.Where(x=>x.ID == id).Select(x=>x.AD +" " +x.SOYAD).FirstOrDefault();
+
+            ViewBag.yazarad = yazarad;
+
             return View(yazar);
         }
 
