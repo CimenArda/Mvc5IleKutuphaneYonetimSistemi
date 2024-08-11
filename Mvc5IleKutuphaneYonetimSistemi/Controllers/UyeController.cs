@@ -78,6 +78,11 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult UyeKitapGecmis(int id)
+        {
+            var kitapgecmis =db.TblHareket.Where(x=>x.UYE==id).ToList();
+            return View(kitapgecmis);
+        }
 
 
 

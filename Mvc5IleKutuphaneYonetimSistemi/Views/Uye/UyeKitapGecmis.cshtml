@@ -1,0 +1,31 @@
+﻿@using Mvc5IleKutuphaneYonetimSistemi.Models.Entity
+@model List<TblHareket>
+@{
+    ViewBag.Title = "UyeKitapGecmis";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<table class="table table-danger">
+
+    <tr>
+        <th>Kitap Adı</th>
+        <th>Kitap Alınan Personel</th>
+        <th>Alış Tarih</th>
+        <th>İade Tarihi</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>@item.TblKitap.AD</td>
+            <td>@item.TblPersonel.PERSONEL</td>
+            <td>@item.ALISTARIH</td>
+            <td>@item.UYEGETIRDIGITARIH</td>
+        </tr>
+    }
+
+
+</table>

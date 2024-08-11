@@ -19,10 +19,11 @@
         <th>Üye Numarası</th>
         <th>Üye Adı</th>
         <th>Üye Soyadı</th>
-        <th>Üye Kullanıcı Adı</th>
         <th>Üye Maili</th>
-        <th>Üye Telefon</th>
+      
         <th>Üye Okul</th>
+        <th>Üye Kitap Geçmişi</th>
+
         <th></th>
         <th></th>
     </tr>
@@ -35,10 +36,11 @@
             <td>@item.ID</td>
             <td>@item.AD</td>
             <td>@item.SOYAD</td>
-            <td>@item.KULLANICIAD</td>
             <td>@item.MAIL</td>
-            <td>@item.TELEFON</td>
             <td>@item.OKUL</td>
+            <td>
+                <a href="/Uye/UyeKitapGecmis/@item.ID" class="btn btn-warning">Geçmiş</a>
+            </td>
             <td>
                 <a href="/Uye/UyeSil/@item.ID" class="btn btn-danger">Sil</a>
             </td>
