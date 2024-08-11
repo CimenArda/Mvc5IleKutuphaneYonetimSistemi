@@ -17,7 +17,9 @@
     <div style="margin-top:15px">
 
         <label>Üye Numarası</label>
-        @Html.TextBoxFor(y => y.UYE, new { @class = "form-control" })
+        @*@Html.TextBoxFor(y => y.UYE, new { @class = "form-control" })*@
+
+        @Html.DropDownListFor(k=>k.TblUye.ID,(List<SelectListItem>)ViewBag.deger1, new { @class = "form-control" })
 
     </div>
 
@@ -25,7 +27,10 @@
     <div style="margin-top:15px">
 
         <label>Kitap Numarası</label>
-        @Html.TextBoxFor(y => y.KITAP, new { @class = "form-control" })
+        @*@Html.TextBoxFor(y => y.KITAP, new { @class = "form-control" })*@
+        @Html.DropDownListFor(k => k.TblKitap.ID, (List<SelectListItem>)ViewBag.deger2, new { @class = "form-control" })
+
+
         @if (ViewBag.Error != null)
         {
             <div class="alert alert-danger" role="alert">
@@ -39,7 +44,9 @@
     <div style="margin-top:15px">
 
         <label>Personel Numarası</label>
-        @Html.TextBoxFor(y => y.PERSONEL, new { @class = "form-control" })
+        @*@Html.TextBoxFor(y => y.PERSONEL, new { @class = "form-control" })*@
+        @Html.DropDownListFor(k => k.TblPersonel.ID, (List<SelectListItem>)ViewBag.deger3, new { @class = "form-control" })
+
         @if (ViewBag.Error2 != null)
         {
             <div class="alert alert-danger" role="alert">
