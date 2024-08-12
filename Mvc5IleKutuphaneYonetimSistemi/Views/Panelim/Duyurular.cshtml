@@ -1,0 +1,38 @@
+﻿@using Mvc5IleKutuphaneYonetimSistemi.Models.Entity
+@model List<TblDuyuru>
+@{
+    ViewBag.Title = "Duyurular";
+    Layout = "~/Views/Shared/_LayoutPanel.cshtml";
+}
+
+
+<table class="table table-bordered">
+
+    <tr >
+        <th>Duyuru Kategorisi</th>
+        <th>Duyuru Tarihi</th>
+       
+        <th>Duyuru İçeriği</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+
+
+            <td>@item.KATEGORİ</td>
+            <td>@Convert.ToDateTime(@item.TARIH).ToString("dd/MM/yyyy")</td>
+       
+            <td>
+               @item.ICERİK
+            </td>
+
+        </tr>
+
+    }
+
+
+
+</table>
+

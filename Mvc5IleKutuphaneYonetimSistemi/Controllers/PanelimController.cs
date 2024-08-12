@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
 {
@@ -52,6 +53,31 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
             return View(hareketler);
 
         }
+
+
+
+        public ActionResult Duyurular()
+        {
+            var duyuruListesi = db.TblDuyuru.ToList();
+            return View(duyuruListesi);
+        }
+
+        public ActionResult DuyuruDetayPanelim(TblDuyuru p)
+        {
+            var duyuru = db.TblDuyuru.Find(p.ID);
+            return View("DuyuruDetay", duyuru);
+        }
+
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Login");
+        }
+
+
+
+
 
 
     }
