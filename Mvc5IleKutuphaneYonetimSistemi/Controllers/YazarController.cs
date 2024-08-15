@@ -7,6 +7,8 @@ using System.Web.Mvc;
 
 namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
 {
+    [Authorize]
+
     public class YazarController : Controller
     {
         // GET: Yazar

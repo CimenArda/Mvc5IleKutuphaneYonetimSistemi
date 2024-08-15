@@ -8,6 +8,8 @@ using System.Web.Mvc;
 
 namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
 {
+    [Authorize]
+
     public class IstatistikController : Controller
     {
         // GET: Istatistik

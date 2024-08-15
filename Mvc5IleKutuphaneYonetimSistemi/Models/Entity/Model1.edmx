@@ -15,6 +15,14 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kullanıcı" Type="varchar" MaxLength="50" />
+          <Property Name="Sifre" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="TblCeza">
           <Key>
             <PropertyRef Name="ID" />
@@ -254,6 +262,7 @@
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DBKUTUPHANEModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCeza" EntityType="Self.TblCeza" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblDuyuru" EntityType="Self.TblDuyuru" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblHakkimizda" EntityType="Self.TblHakkimizda" Schema="dbo" store:Type="Tables" />
@@ -564,6 +573,7 @@
           <FunctionImport Name="sp_upgraddiagrams" />
           <EntitySet Name="TblMesajlar" EntityType="DBKUTUPHANEModel.TblMesajlar" />
           <EntitySet Name="TblDuyuru" EntityType="DBKUTUPHANEModel.TblDuyuru" />
+          <EntitySet Name="TblAdmin" EntityType="DBKUTUPHANEModel.TblAdmin" />
         </EntityContainer>
         <EntityType Name="TblHakkimizda">
           <Key>
@@ -612,6 +622,14 @@
           <Property Name="KATEGORİ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ICERİK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="TARIH" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kullanıcı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -784,6 +802,15 @@
                 <ScalarProperty Name="TARIH" ColumnName="TARIH" />
                 <ScalarProperty Name="ICERİK" ColumnName="ICERİK" />
                 <ScalarProperty Name="KATEGORİ" ColumnName="KATEGORİ" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdmin">
+            <EntityTypeMapping TypeName="DBKUTUPHANEModel.TblAdmin">
+              <MappingFragment StoreEntitySet="TblAdmin">
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="Kullanıcı" ColumnName="Kullanıcı" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -40,6 +40,7 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Models.Entity
         public virtual DbSet<TblIletisim> TblIletisim { get; set; }
         public virtual DbSet<TblMesajlar> TblMesajlar { get; set; }
         public virtual DbSet<TblDuyuru> TblDuyuru { get; set; }
+        public virtual DbSet<TblAdmin> TblAdmin { get; set; }
     
         public virtual ObjectResult<string> enFazlakitapYazar()
         {

@@ -1,0 +1,39 @@
+﻿@using Mvc5IleKutuphaneYonetimSistemi.Models.Entity
+
+@model List<TblDuyuru>
+
+
+@foreach (var item in Model)
+{
+
+
+
+    <div class="post">
+
+        <div class="user-block">
+
+
+            <span class="username">
+
+                <a href="#">@item.KATEGORİ</a>
+
+                <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
+
+            </span>
+
+            <span class="description">@item.TARIH</span>
+
+        </div>
+
+        <!-- /.user-block -->
+
+        <p>
+            @item.ICERİK
+        </p>
+
+
+    </div>
+
+
+
+}

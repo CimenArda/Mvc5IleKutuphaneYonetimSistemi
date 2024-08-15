@@ -5,39 +5,129 @@
     Layout = "~/Views/Shared/_LayoutPanel.cshtml";
 }
 
-<h2>Kitap Geçmişim</h2>
-<br />
-
-<table class="table table-bordered">
-
-    <tr>
-
-        <th>Kitap  Adı</th>
-        <th>Alış Tarihi</th>
-        <th>Üyenin İade Tarihi</th>
-
-
-        <th></th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model)
-        {
-            <tr>
 
 
 
-                <td>@item.TblKitap.AD</td>
-                <td>@Convert.ToDateTime(@item.ALISTARIH).ToString("dd/MM/yyyy")</td>
-                <td>@Convert.ToDateTime(@item.UYEGETIRDIGITARIH).ToString("dd/MM/yyyy")</td>
+<!DOCTYPE html>
 
-            
+<html>
+
+<body class="hold-transition sidebar-mini">
+
+    <section class="content">
+
+        <div class="container-fluid">
+
+            <div class="row">
 
 
-            </tr>
 
-        }
+                <!-- /.col -->
+
+                <div class="col-md-12">
+
+                    <div class="card">
+
+                        <div class="card-header p-2">
 
 
 
-</table>
+                        </div><!-- /.card-header -->
+
+                        <div class="card-body">
+
+
+
+                            <div class="tab-pane" id="timeline">
+
+                                <!-- The timeline -->
+
+                                <div class="timeline timeline-inverse">
+
+                                    <!-- timeline time label -->
+
+                                    @foreach (var item in Model)
+
+                                    {
+
+                                        <div class="time-label">
+
+                                            <a class="btn btn-success">
+
+                                                <span class="bg-success">
+
+                                                    @(((DateTime)item.ALISTARIH).ToString("dd-MMM-yyyy"))
+
+                                                </span>
+
+                                            </a>
+
+                                            -----
+
+                                            <a class="btn btn-warning">
+
+                                                <span class="bg-warning">
+
+                                                    @(((DateTime)item.UYEGETIRDIGITARIH).ToString("dd-MMM-yyyy"))
+
+                                                </span>
+
+                                            </a>
+
+                                        </div>
+
+                                        <!-- /.timeline-label -->
+
+                                        <!-- timeline item -->
+
+                                        <div>
+
+                                            @*<i class="fas fa-comment bg-primary"></i>*@
+
+                                            <div class="timeline-item">
+
+                                                <div class="timeline-body">
+
+                                                    @item.TblKitap.AD
+
+                                                </div>
+
+                                                @*<div class="timeline-footer">
+
+                                                        <a href="#" class="btn btn-primary btn-sm">Düzenle</a>
+
+                                                        <a href="#" class="btn btn-danger btn-sm">Sil</a>
+
+                                                    </div>*@
+
+                                            </div>
+
+                                        </div>
+
+                                    }
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div><!-- /.card-body -->
+
+                </div>
+
+                <!-- /.nav-tabs-custom -->
+
+            </div>
+
+            <!-- /.col -->
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
 

@@ -7,6 +7,8 @@ using System.Web.Mvc;
 
 namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
 {
+    [Authorize]
+
     public class MesajlarController : Controller
     {
         DbKutuphaneEntities db = new DbKutuphaneEntities();
@@ -41,5 +43,37 @@ namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
             var mesajlar = db.TblMesajlar.Where(x => x.GONDEREN == uyemail).ToList();
             return View(mesajlar);
         }
+
+
+
+
+        public PartialViewResult Partial1()
+        {
+            var uyemail = (string)Session["Mail"].ToString();
+            var gelensayisi = db.TblMesajlar.Where(x => x.ALICI == uyemail).Count();
+
+            ViewBag.gelen =gelensayisi.ToString();
+            var gidensayisi = db.TblMesajlar.Where(x => x.GONDEREN == uyemail).Count();
+
+            ViewBag.giden = gidensayisi.ToString();
+
+            return PartialView();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

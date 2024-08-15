@@ -1,0 +1,30 @@
+﻿@model Mvc5IleKutuphaneYonetimSistemi.Models.Entity.TblAdmin
+@{
+    ViewBag.Title = "AdminDuzenle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("AdminDuzenle", "Ayarlar", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <label class="text-bg-danger fw-bolder ">Kullanıcı Adı</label>
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Kullanıcı, new { @class = "form-control" })
+
+        <br />
+        <label class="text-bg-danger fw-bolder ">Şifre </label>
+        <br />
+        <br />
+        @Html.TextBoxFor(k => k.Sifre, new { @class = "form-control" })
+
+
+        <div>
+            <button class="btn btn-success">Admin Bilgisi Güncelle</button>
+        </div>
+
+
+    </div>
+}
+

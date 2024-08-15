@@ -7,6 +7,8 @@ using System.Web.Mvc;
 
 namespace Mvc5IleKutuphaneYonetimSistemi.Controllers
 {
+    [AllowAnonymous]
+
     public class RegisterController : Controller
     {
         // GET: Register
